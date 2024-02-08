@@ -2,7 +2,7 @@ import StatusItem from "./StatusItem";
 
 const ApprovalContainer = () => {
   return (
-    <div className="mt-2 ml-5 w-96 border-2 border-gray-600">
+    <div id="stat-container" className="mt-2 border-gray-600">
       <StatusItem heading={"Drafts"} count={0} color={"bg-blue-700"} />
       <StatusItem heading={"Processing"} count={0} color={"bg-yellow-400"} />
       <StatusItem

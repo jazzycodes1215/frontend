@@ -23,6 +23,20 @@
     height: auto;
 }
 
+#stat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 0 2rem 2rem 0;
+    width: 30%;
+}
+
+#stat-container div {
+    background-color: #0084b013;
+    border-radius: 1rem;
+}
+
 nav {
     border-radius: inherit;
     background-image: linear-gradient(to right, #00b4db, #0083b0);

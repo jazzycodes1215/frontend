@@ -6,32 +6,36 @@ const Name = () => {
   const [phone, setPhone] = useState(""); 
   const [primaryPOCName, setPrimaryPOCName] = useState(""); 
   const [additionalPOCName, setAdditionalPOCName] = useState(""); 
-  const [gettingValue, setGettingValue] = useState(0);
+  const [inputCount, setInputCount] = useState(0);
 
-let add = 0
+  const handleInputChange = () => {
+    setInputCount(prevCount => prevCount + 1);
+  }
+
 
   const handleChangeName = (event) => {
     setName(event.target.value);
-    add = add + 1
+    
   };
 
   const handleChangeEmail = (event) => {
-    setEmail(event.target.value); 
-    add = add + 1  };
+    setEmail(event.target.value);
+  } 
 
   const handleChangePhone = (event) => {
     setPhone(event.target.value);
-    add = add + 1  };
+    };
 
   const handleChangePrimaryPOCName = (event) => {
     setPrimaryPOCName(event.target.value);
-    add = add + 1  };
+   };
 
   const handleChangeAdditionalPOCName = (event) => {
     setAdditionalPOCName(event.target.value);
-    add = add + 1  };
+  };
 
-  console.log(add)
+  console.log(inputCount)
+
   return (
     <div className="m-5">
       <label htmlFor="name">Name:</label>
