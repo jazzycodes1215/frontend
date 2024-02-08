@@ -4,29 +4,29 @@ import Name from "../taskFields/inputs/Name";
 
 
 const ProgressContainer = () => {
-  const [integerValueName, setIntegerValueName] = useState(0);
+  const [gettingValue, setGettingValue] = useState(0);
   const [status, setStatus] = useState("Not started");
 
   useEffect(() => {
     // Function to set status based on the value of integerValueName
     const setStatusFromValue = () => {
-      if (integerValueName === 0) {
+      if (gettingValue === 0) {
         setStatus("Not started");
-      } else if (integerValueName === 1) {
+      } else if (gettingValue > 1) {
         setStatus("In progress");
-      } else if (integerValueName === 2) {
+      } else if (gettingValue <= 5) {
         setStatus("Completed");
       }
     };
 
     // Call the function initially and whenever integerValueName changes
     setStatusFromValue();
-  }, [integerValueName]);
+  }, [gettingValue]);
 
 // console.log(integerValueName)
 
   return (
-    <div className="mt-2 mr-5 w-96 border-2 border-gray-600">
+    <div className="flex-row w mt-2 mr-5 w-96">
       <ProgressItem heading={"Requester Information"} status={"Not started"} />
       <ProgressItem heading={"Request Details"} status={"Not started"} />
       <ProgressItem heading={"Disclosure Criteria"} status={"Not started"} />

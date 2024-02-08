@@ -11,8 +11,8 @@ const Home = () => {
       <div className="flex justify-between">
         <ApprovalContainer />
         <TaskContainer />
-        <ProgressContainer />
-      </div>
+         </div>
+         <ProgressContainer />
     </div>
   );
 };
